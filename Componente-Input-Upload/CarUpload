@@ -1,5 +1,5 @@
-@using Genex.Blazor.Pages.Samples.UploadArquivo
-@using Genex.Utils.FileUpload
+@using Blazor.Pages.Samples.UploadArquivo
+@using Utils.FileUpload
 
 //card com o pomponente de upload FileUploadComponent
 // que tem um evento de callBack para retornar o arquivo selecionado pelo usuário

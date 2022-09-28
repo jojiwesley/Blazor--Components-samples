@@ -1,5 +1,5 @@
-@using Genex.Planilhas
-@using Genex.Utils.FileUpload
+@using Planilhas
+@using Utils.FileUpload
 @inject IFileUpload uploadService
 @inject IPlanilhasAppService planilhaService
 
