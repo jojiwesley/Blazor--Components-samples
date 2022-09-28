@@ -1,0 +1,36 @@
+@using Blazor.Pages.Samples.UploadArquivo
+@using Utils.FileUpload
+
+//card com o pomponente de upload FileUploadComponent
+// que tem um evento de callBack para retornar o arquivo selecionado pelo usuário
+
+
+
+
+
+<div class="card w-100">
+
+    <div class="card-body text-center p-0" style="background-color:#f2f2f2;">
+        <CardHeader Style="font-size:1.5rem;" TextColor="TextColor.Light" Background="Background.Primary" Border="Border.RoundedTop" TextAlignment="TextAlignment.Center">@Title</CardHeader>
+        <p class="card-text p-3 m-0 text-lg-start text-wrap " Style="font-size:1.1rem;"></p>
+        <div class="pb-4">
+        //componente de upload
+            <FileUploadComponent FilesChangedEventCallBack="FileTabelaPrecoCorteCallBack"></FileUploadComponent>
+        </div>
+            
+    
+    </div>
+</div>
+@code {
+    [Parameter] public string Title { get; set; } 
+
+    //parametro da lista da tambela
+    [Parameter]
+    public List<FileUploadResponse> tabelaPrecoCorte { get; set; }
+    //chamada do evendo de callBack
+    public void FileTabelaPrecoCorteCallBack(List<FileUploadResponse> uploadResponses)
+    {
+        tabelaPrecoCorte = uploadResponses;
+    }
+
+}
